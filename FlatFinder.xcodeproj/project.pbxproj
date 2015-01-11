@@ -29,10 +29,25 @@
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-FlatFinder/Pods-FlatFinder-resources.sh"
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
+		</dict>
+		<key>1645BFBA6DDC50A31C284237</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-FlatFinderTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-FlatFinderTests/Pods-FlatFinderTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>38B02005D150CB6A7BFAAE5B</key>
 		<dict>
@@ -51,9 +66,11 @@
 			<string>38B02CBF7FE07931A98DD657</string>
 			<key>buildPhases</key>
 			<array>
+				<string>4C425B75D5C0083DD87CEA23</string>
 				<string>38B02E0019933F56B0A04E42</string>
 				<string>38B0295431D2066FA365978D</string>
 				<string>38B0274C75DBB7CAD481DC4E</string>
+				<string>5BE3C8C7B0FF3E95731A647E</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -88,7 +105,7 @@
 		<key>38B0204E240889AEFD9EBEDC</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>3964A4E114A4E51A8E556E16</string>
+			<string>B3B2C7015A96A044B4095051</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
@@ -150,7 +167,8 @@
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>5710D9EC833ED57341B756D5</string>
+				<string>70CB8374A365FFFCBE290B8C</string>
+				<string>DB840217ABCEA0275C9CFF27</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -291,6 +309,8 @@
 		</dict>
 		<key>38B027C3CAFE33DFE3EFA94C</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>F051969EF5FF4BBF2835F4BC</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -426,7 +446,9 @@
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
-			<array/>
+			<array>
+				<string>FD68D5D342CA1C54222FA4E2</string>
+			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -539,6 +561,8 @@
 		</dict>
 		<key>38B02ADC2D97EB662E466BE1</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1645BFBA6DDC50A31C284237</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -622,6 +646,8 @@
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -771,7 +797,7 @@
 		<key>38B02EE25BE7003A9E65BE9A</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>4F64326D56548D186F41FC19</string>
+			<string>BDCFA719DB9EE718A83B7D83</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
@@ -797,6 +823,8 @@
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -833,6 +861,36 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>4C425B75D5C0083DD87CEA23</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
 		<key>4E263F25CC4A258796C9A57A</key>
 		<dict>
 			<key>explicitFileType</key>
@@ -861,18 +919,50 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>5710D9EC833ED57341B756D5</key>
+		<key>5BE3C8C7B0FF3E95731A647E</key>
 		<dict>
-			<key>fileRef</key>
-			<string>4E263F25CC4A258796C9A57A</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-FlatFinderTests/Pods-FlatFinderTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>603D3A3A3CEC95BFC0DA8402</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-FlatFinderTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>66EC1C18B2E9C7895A1A81FF</key>
 		<dict>
 			<key>children</key>
 			<array>
 				<string>4E263F25CC4A258796C9A57A</string>
+				<string>603D3A3A3CEC95BFC0DA8402</string>
+				<string>DF38501461657B3451972B63</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -881,17 +971,43 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>70CB8374A365FFFCBE290B8C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DF38501461657B3451972B63</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>8FD033052D6BF14154E5F586</key>
 		<dict>
 			<key>children</key>
 			<array>
 				<string>3964A4E114A4E51A8E556E16</string>
 				<string>4F64326D56548D186F41FC19</string>
+				<string>F051969EF5FF4BBF2835F4BC</string>
+				<string>1645BFBA6DDC50A31C284237</string>
+				<string>B3B2C7015A96A044B4095051</string>
+				<string>BDCFA719DB9EE718A83B7D83</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B3B2C7015A96A044B4095051</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-FlatFinder.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-FlatFinder/Pods-FlatFinder.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -924,6 +1040,63 @@ fi
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
+		</dict>
+		<key>BDCFA719DB9EE718A83B7D83</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-FlatFinder.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-FlatFinder/Pods-FlatFinder.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DB840217ABCEA0275C9CFF27</key>
+		<dict>
+			<key>fileRef</key>
+			<string>603D3A3A3CEC95BFC0DA8402</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DF38501461657B3451972B63</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-FlatFinder.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F051969EF5FF4BBF2835F4BC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-FlatFinderTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-FlatFinderTests/Pods-FlatFinderTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FD68D5D342CA1C54222FA4E2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>603D3A3A3CEC95BFC0DA8402</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
